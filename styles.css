@@ -34,14 +34,20 @@ body {
 }
 
 .noIcon,
-.maybeIcon {
+.maybeIcon,
+.heartIcon {
   font-size: 20rem;
   margin: auto;
   padding: 3%;
   color: white;
 }
+
+.maybeIcon {
+  font-size: 19.8rem;
+}
 .noIcon:hover,
-.maybeIcon:hover {
+.maybeIcon:hover,
+.heartIcon:hover {
   color: rgb(255, 101, 127);
 }
 .question img {
@@ -89,6 +95,7 @@ input[type="radio"]:checked:after {
 .question .options label {
   font-size: 30px;
   width: 95%;
+  height: max-content;
   text-align: center;
 }
 
