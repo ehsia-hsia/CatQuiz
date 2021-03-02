@@ -7,20 +7,20 @@ let Q1A2 = document.getElementById("Q1A2");
 let Q2A2 = document.getElementById("Q2A2");
 let Q1A3 = document.getElementById("Q1A3");
 let Q2A3 = document.getElementById("Q2A3");
-let button = document.getElementsByClassName("Q1");
-let label = document.getElementsByTagName("label");
-let weirdArr = 0;
+// let button = document.getElementsByClassName("Q1");
+// let label = document.getElementsByTagName("label");
+// let weirdArr = 0;
 
-for (let i = 0; i < button.length; i++) {
-  button[i].addEventListener("focus", backColor);
-  function backColor() {
-    if (button[i].focus && weirdArr == 0) {
-      button[i].style.borderColor = "pink";
-      button[i].style.borderWidth = "10px";
-      // weirdArr++;
-    }
-  }
-}
+// for (let i = 0; i < button.length; i++) {
+//   button[i].addEventListener("focus", backColor);
+//   function backColor() {
+//     if (button[i].focus && weirdArr == 0) {
+//       button[i].style.borderColor = "pink";
+//       button[i].style.borderWidth = "10px";
+//       // weirdArr++;
+//     }
+//   }
+// }
 Q1A1.addEventListener("click", subCat);
 Q2A1.addEventListener("click", subCat);
 
