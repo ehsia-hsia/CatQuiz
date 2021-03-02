@@ -37,7 +37,7 @@
   </head>
   <body>
 
-    <h1> Question 1 </h1>
+    <h1 class="questionTitle"> Do you think cat's are cute? </h1>
 
 <div class="grid-layout">
   
@@ -45,7 +45,7 @@
     <img src="https://www.civhc.org/wp-content/uploads/2018/10/question-mark-768x768.png">
     <div class="options">
       <input id="Q1A1" name="question1" type="radio">  </input>
-     <label for="Q1A1"> Option 1 </label>
+     <label for="Q1A1"> No. </label>
     </div>
   </div>
 
@@ -53,7 +53,7 @@
     <img src="https://www.civhc.org/wp-content/uploads/2018/10/question-mark-768x768.png">
     <div class="options">
       <input id="Q1A2" name="question1" type="radio">  </input>
-     <label for="Q1A2"> Option 2 </label>
+     <label for="Q1A2"> Sometimes... </label>
     </div>
   </div>
 
@@ -61,20 +61,20 @@
      <img src="https://www.civhc.org/wp-content/uploads/2018/10/question-mark-768x768.png">
     <div class="options">
       <input id="Q1A3" name="question1" type="radio">  </input>
-     <label for="Q1A3"> Option 3 </label>
+     <label for="Q1A3"> YES! </label>
     </div>
   </div>
 </div>
 
 
-<h1> Question 2</h1>
+<h1 class="questionTitle"> Do you like cats?</h1>
 
 <div class="grid-layout">
   <div class="question">
     <img src="https://www.civhc.org/wp-content/uploads/2018/10/question-mark-768x768.png">
     <div class="options">
       <input id="Q2A1" type="radio" name="question2">  </input>
-     <label for="Q2A1"> Option 1 </label>
+     <label for="Q2A1"> No. </label>
   </div>
   </div>
 
@@ -84,7 +84,7 @@
     <div class="options">
      
       <input id="Q2A2" type="radio" name="question2">  </input>
-     <label for="Q2A2"> Option 2 </label>
+     <label for="Q2A2"> Maybe </label>
   </div>
 </div>
 
@@ -94,13 +94,17 @@
     <div class="options">
      
       <input id="Q2A3" type="radio" name="question2">  </input>
-     <label for="Q2A3"> Option 3 </label>
+     <label for="Q2A3"> YES!</label>
   </div>
 </div>
+</div>
+<div class="resultArea">
+  <h3 id="result">Get results</h3>
+  <button id="submit"> Submit </button> 
+</div>
 
-<button id="submit"> submit </button>
 
-<p id="result"> </p>
+
     <script src="index.js" charset="utf-8"></script>
   </body>
 </html>
