@@ -3,22 +3,39 @@
 }
 
 body {
-  margin: 2%;
+  margin: 0;
   background-color: rgb(246, 140, 158);
 }
 
+/*Heading*/
+.header {
+  width: 100vw;
+  height: 300px;
+  background-color: white;
+  text-align: center;
+  color: rgb(246, 140, 158);
+  padding: 6%;
+}
+.header h1 {
+  font-size: 5vw;
+}
+
+/*Headings */
 .questionTitle {
   text-align: center;
   padding: 3%;
+  font-size: 3vw;
   color: white;
 }
+
+/*Main Grid*/
 .grid-layout {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   align-items: center;
   padding: 2rem;
-  margin: auto;
+  margin: 2%;
 }
 
 .question {
@@ -33,34 +50,31 @@ body {
   box-shadow: 0 8px 6px -6px black;
 }
 
+/*Icons*/
 .noIcon,
 .maybeIcon,
 .heartIcon {
-  font-size: 20rem;
+  font-size: 20vw;
   margin: auto;
   padding: 3%;
   color: white;
 }
 
 .maybeIcon {
-  font-size: 19.8rem;
+  font-size: 19.8vw;
 }
+
 .noIcon:hover,
 .maybeIcon:hover,
 .heartIcon:hover {
   color: rgb(255, 101, 127);
 }
-.question img {
-  max-height: 300px;
-  max-width: 100%;
-  margin: auto;
-}
 
+/*Input and Labels */
 .options {
-  border-top: solid 2px rgb(254, 117, 140);
   padding: 5%;
-  min-height: fit-content;
   background-color: rgb(255, 250, 251);
+  border-top: solid 2px rgb(254, 117, 140);
 }
 
 input[type="radio"]:after {
@@ -92,42 +106,44 @@ input[type="radio"]:checked:after {
   display: inline-block;
   visibility: visible;
 }
+
 .question .options label {
   font-size: 30px;
   width: 95%;
-  height: max-content;
   text-align: center;
 }
 
+/*Results*/
 .resultArea {
   border: solid 2px black;
-  padding: 6%;
+  padding: 4%;
   width: 80%;
   height: 100%;
   margin: auto;
   margin-top: 6%;
+  margin-bottom: 5%;
   text-align: center;
   box-shadow: 0 8px 6px -6px black;
   background-color: white;
 }
-.resultArea h3 {
-  padding: 4%;
-}
 
 #submit {
   padding: 1%;
+  margin-top: 5%;
   width: 80%;
   border: solid 2px rgb(255, 59, 92);
   background-color: rgb(255, 101, 127);
   color: white;
+  font-size: 4rem;
   font-weight: 600;
   box-shadow: 6px 6px 3px -6px black;
 }
 #submit:hover {
   background-color: rgb(255, 59, 92);
 }
-.result {
-  padding-top: 5%;
-  padding-bottom: 0;
-  margin-bottom: 0;
+#result {
+  padding-top: 0;
+  margin-bottom: 3%;
+  margin-top: 0;
+  font-size: 3.5rem;
 }

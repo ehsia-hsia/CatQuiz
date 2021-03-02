@@ -37,13 +37,13 @@ function getResults() {
   if (catCount >= 1) {
     resultText.style.color = "green";
 
-    return (resultText.innerHTML = `get a cat ${catCount}`);
+    return (resultText.innerHTML = `Get a cat ${catCount} <i class="fas fa-heart"></i>`);
   } else if (catCount == 0) {
     resultText.style.color = "gold";
-    return (resultText.innerHTML = `you seem on the fence ${catCount}`);
+    return (resultText.innerHTML = `You seem on the fence... ${catCount}`);
   } else {
     resultText.style.color = "red";
-    return (resultText.innerHTML = `dont get a cat ${catCount}`);
+    return (resultText.innerHTML = `DON'T get a cat ${catCount}`);
   }
 }
 
