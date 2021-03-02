@@ -7,15 +7,6 @@ let Q1A2 = document.getElementById("Q1A2");
 let Q2A2 = document.getElementById("Q2A2");
 let Q1A3 = document.getElementById("Q1A3");
 let Q2A3 = document.getElementById("Q2A3");
-// let button = document.getElementsByTagName("button");
-// let label = document.getElementsByTagName("label");
-// for (let i = 0; i < button.length; i++) {
-//   button[i].addEventListener("click", backColor);
-//   function backColor() {
-//     button[i].style.borderColor = "pink";
-//     button[i].style.borderWidth = "10px";
-//   }
-// }
 
 Q1A1.addEventListener("click", subCat);
 Q2A1.addEventListener("click", subCat);
