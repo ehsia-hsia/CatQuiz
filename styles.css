@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 2%;
   background-color: rgb(246, 140, 158);
@@ -14,21 +15,16 @@ body {
 .grid-layout {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   align-items: center;
   padding: 2rem;
   margin: auto;
 }
 
 .question {
-  height: 100%;
-  width: 100%;
-  border: solid;
   margin: auto;
-  text-align: center;
-  box-shadow: 0 8px 6px -6px black;
-  background-color: white;
 }
+
 .question img {
   max-height: 300px;
   max-width: 100%;
@@ -40,13 +36,20 @@ body {
   padding: 5%;
 }
 
-input {
-  text-align: center;
+.customInput {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border: solid;
   margin: auto;
+  text-align: center;
+  box-shadow: 0 8px 6px -6px black;
+  background-color: white;
 }
 
 .question .options label {
   font-size: 30px;
+  width: 90%;
 }
 
 .resultArea {
