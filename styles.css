@@ -20,12 +20,13 @@ body {
   padding: 2rem;
   margin: auto;
 }
-/* button:focus {
+/* .Q1:focus {
   border: solid 10px pink;
 }
-button:active {
+.Q2:focus {
   border: solid 10px pink;
 } */
+
 .question {
   margin: auto;
 }
