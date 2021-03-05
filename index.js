@@ -145,7 +145,7 @@ function testFun(arrayItem) {
   let icon = arrayItem.parentNode.parentNode.children[0].children[0];
   if (arrayItem.disabled == false) {
     arrayItem.parentNode.style.backgroundColor = "rgb(255, 250, 251)";
-    arrayItem.parentNode.style.borderColor = "white";
+    arrayItem.parentNode.style.borderColor = "rgb(254, 117, 140)";
     arrayItem.parentNode.parentNode.style.backgroundColor =
       "rgb(244, 212, 219) ";
     icon.style.color = "white";
