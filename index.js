@@ -27,7 +27,7 @@ function disabledInputs1() {
   Q1A1.disabled = true;
   disableStyle(Q1A2);
   disableStyle(Q1A1);
-  yesIcons();
+  selectedStyle(Q1A3);
 }
 
 function disabledInputs1A() {
@@ -35,19 +35,7 @@ function disabledInputs1A() {
   Q2A1.disabled = true;
   disableStyle(Q2A2);
   disableStyle(Q2A1);
-  yesIcons2();
-}
-
-function yesIcons() {
-  noIcon[0].style.color = "lightgrey";
-  maybeIcon[0].style.color = "lightgrey";
-  heartIcon[0].style.color = "rgb(255, 101, 127)";
-}
-
-function yesIcons2() {
-  noIcon[1].style.color = "lightgrey";
-  maybeIcon[1].style.color = "lightgrey";
-  heartIcon[1].style.color = "rgb(255, 101, 127)";
+  selectedStyle(Q2A3);
 }
 
 //__X NO -1______________
@@ -66,7 +54,6 @@ function disabledInputs2() {
   Q1A3.disabled = true;
   disableStyle(Q1A2);
   disableStyle(Q1A3);
-  noIcons();
 }
 
 function disabledInputs2A() {
@@ -74,19 +61,6 @@ function disabledInputs2A() {
   Q2A3.disabled = true;
   disableStyle(Q2A2);
   disableStyle(Q2A3);
-  noIcons2();
-}
-
-function noIcons() {
-  heartIcon[0].style.color = "lightgrey";
-  maybeIcon[0].style.color = "lightgrey";
-  noIcon[0].style.color = "rgb(255, 101, 127)";
-}
-
-function noIcons2() {
-  heartIcon[1].style.color = "lightgrey";
-  maybeIcon[1].style.color = "lightgrey";
-  noIcon[1].style.color = "rgb(255, 101, 127)";
 }
 
 //__WAvE SOMETIME 0______________
@@ -104,7 +78,6 @@ function disabledInputs3() {
   Q1A3.disabled = true;
   disableStyle(Q1A1);
   disableStyle(Q1A3);
-  maybeIcons();
 }
 
 function disabledInputs3A() {
@@ -112,26 +85,21 @@ function disabledInputs3A() {
   Q2A3.disabled = true;
   disableStyle(Q2A1);
   disableStyle(Q2A3);
-  maybeIcons2();
-}
-function maybeIcons() {
-  heartIcon[0].style.color = "lightgrey";
-  noIcon[0].style.color = "lightgrey";
-  maybeIcon[0].style.color = "rgb(255, 101, 127)";
-}
-
-function maybeIcons2() {
-  heartIcon[1].style.color = "lightgrey";
-  noIcon[1].style.color = "lightgrey";
-  maybeIcon[1].style.color = "rgb(255, 101, 127)";
 }
 
 //__Disable Styles
+
 function disableStyle(inputName) {
+  let icon = inputName.parentNode.parentNode.children[0].children[0];
   if ((inputName.disabled = true)) {
     inputName.parentNode.style.backgroundColor = "grey";
     inputName.parentNode.parentNode.style.backgroundColor = "grey";
+    icon.style.color = "lightgrey";
   }
+}
+function selectedStyle(inputSelected) {
+  icon = inputSelected.parentNode.parentNode.children[0].children[0];
+  icon.style.color = "rgb(255, 101, 127)";
 }
 
 //__Submit and Results Style
