@@ -1,7 +1,12 @@
 let catCount = 0;
 let inputCheck = document.getElementsByTagName("input");
 let resultText = document.getElementById("result");
+let resetButton = document.getElementById("reset");
+let submitButton = document.getElementById("submit");
 
+//Button Events
+resetButton.addEventListener("click", clearQuiz);
+submitButton.addEventListener("click", getResults);
 //Question 1
 let Q1A1 = document.getElementById("Q1A1");
 let Q1A2 = document.getElementById("Q1A2");
@@ -98,6 +103,7 @@ function disableStyle(inputName) {
   let icon = inputName.parentNode.parentNode.children[0].children[0];
   if ((inputName.disabled = true)) {
     inputName.parentNode.style.backgroundColor = "rgb(167, 163, 163)";
+    inputName.parentNode.style.borderColor = "white";
     inputName.parentNode.parentNode.style.backgroundColor =
       "rgb(167, 163, 163)";
     icon.style.color = "lightgrey";
@@ -110,13 +116,10 @@ function selectedStyle(inputSelected) {
 }
 
 //__Submit and Results Style
-let submitButton = document.getElementById("submit");
-submitButton.addEventListener("click", getResults);
 
 function getResults() {
   if (catCount >= 1) {
     resultText.style.color = "green";
-
     return (resultText.innerHTML = `Get a cat ${catCount} <i class="fas fa-heart"></i>`);
   } else if (catCount == 0) {
     resultText.style.color = "gold";
@@ -125,5 +128,26 @@ function getResults() {
     resultText.style.color = "red";
     return (resultText.innerHTML = `Don't get a cat ${catCount}           <i class="far fa-times-circle"></i>
     `);
+  }
+}
+
+function clearQuiz() {
+  catCount = 0;
+  let arrayTest = [Q1A1, Q2A1, Q1A2, Q2A2, Q1A3, Q2A3];
+  for (let i = 0; i < arrayTest.length; i++) {
+    let curItem = arrayTest[i];
+    curItem.disabled = false;
+    curItem.checked = false;
+    testFun(curItem);
+  }
+}
+function testFun(arrayItem) {
+  let icon = arrayItem.parentNode.parentNode.children[0].children[0];
+  if (arrayItem.disabled == false) {
+    arrayItem.parentNode.style.backgroundColor = "rgb(255, 250, 251)";
+    arrayItem.parentNode.style.borderColor = "white";
+    arrayItem.parentNode.parentNode.style.backgroundColor =
+      "rgb(244, 212, 219) ";
+    icon.style.color = "white";
   }
 }
