@@ -7,29 +7,134 @@ let Q1A2 = document.getElementById("Q1A2");
 let Q2A2 = document.getElementById("Q2A2");
 let Q1A3 = document.getElementById("Q1A3");
 let Q2A3 = document.getElementById("Q2A3");
-// let button = document.getElementsByClassName("Q1");
-// let label = document.getElementsByTagName("label");
-// let weirdArr = 0;
+let noIcon = document.querySelectorAll(".noIcon");
+let maybeIcon = document.querySelectorAll(".maybeIcon");
+let heartIcon = document.querySelectorAll(".heartIcon");
 
-// for (let i = 0; i < button.length; i++) {
-//   button[i].addEventListener("focus", backColor);
-//   function backColor() {
-//     if (button[i].focus && weirdArr == 0) {
-//       button[i].style.borderColor = "pink";
-//       button[i].style.borderWidth = "10px";
-//       // weirdArr++;
-//     }
-//   }
-// }
-Q1A1.addEventListener("click", subCat);
-Q2A1.addEventListener("click", subCat);
-
-Q1A2.addEventListener("click", noCat);
-Q2A2.addEventListener("click", noCat);
+//__HEART YES +1_______________
 
 Q1A3.addEventListener("click", addCat);
+Q1A3.addEventListener("click", disabledInputs1);
 Q2A3.addEventListener("click", addCat);
+Q2A3.addEventListener("click", disabledInputs1A);
 
+function addCat() {
+  catCount += 1;
+}
+
+function disabledInputs1() {
+  Q1A2.disabled = true;
+  Q1A1.disabled = true;
+  disableStyle(Q1A2);
+  disableStyle(Q1A1);
+  yesIcons();
+}
+
+function disabledInputs1A() {
+  Q2A2.disabled = true;
+  Q2A1.disabled = true;
+  disableStyle(Q2A2);
+  disableStyle(Q2A1);
+  yesIcons2();
+}
+
+function yesIcons() {
+  noIcon[0].style.color = "lightgrey";
+  maybeIcon[0].style.color = "lightgrey";
+  heartIcon[0].style.color = "rgb(255, 101, 127)";
+}
+
+function yesIcons2() {
+  noIcon[1].style.color = "lightgrey";
+  maybeIcon[1].style.color = "lightgrey";
+  heartIcon[1].style.color = "rgb(255, 101, 127)";
+}
+
+//__X NO -1______________
+
+Q1A1.addEventListener("click", subCat);
+Q1A1.addEventListener("click", disabledInputs2);
+Q2A1.addEventListener("click", subCat);
+Q2A1.addEventListener("click", disabledInputs2A);
+
+function subCat() {
+  catCount -= 1;
+}
+
+function disabledInputs2() {
+  Q1A2.disabled = true;
+  Q1A3.disabled = true;
+  disableStyle(Q1A2);
+  disableStyle(Q1A3);
+  noIcons();
+}
+
+function disabledInputs2A() {
+  Q2A2.disabled = true;
+  Q2A3.disabled = true;
+  disableStyle(Q2A2);
+  disableStyle(Q2A3);
+  noIcons2();
+}
+
+function noIcons() {
+  heartIcon[0].style.color = "lightgrey";
+  maybeIcon[0].style.color = "lightgrey";
+  noIcon[0].style.color = "rgb(255, 101, 127)";
+}
+
+function noIcons2() {
+  heartIcon[1].style.color = "lightgrey";
+  maybeIcon[1].style.color = "lightgrey";
+  noIcon[1].style.color = "rgb(255, 101, 127)";
+}
+
+//__WAvE SOMETIME 0______________
+Q1A2.addEventListener("click", maybeCat);
+Q1A2.addEventListener("click", disabledInputs3);
+
+Q2A2.addEventListener("click", maybeCat);
+Q2A2.addEventListener("click", disabledInputs3A);
+
+function maybeCat() {
+  catCount -= 0;
+}
+function disabledInputs3() {
+  Q1A1.disabled = true;
+  Q1A3.disabled = true;
+  disableStyle(Q1A1);
+  disableStyle(Q1A3);
+  maybeIcons();
+}
+
+function disabledInputs3A() {
+  Q2A1.disabled = true;
+  Q2A3.disabled = true;
+  disableStyle(Q2A1);
+  disableStyle(Q2A3);
+  maybeIcons2();
+}
+function maybeIcons() {
+  heartIcon[0].style.color = "lightgrey";
+  noIcon[0].style.color = "lightgrey";
+  maybeIcon[0].style.color = "rgb(255, 101, 127)";
+}
+
+function maybeIcons2() {
+  heartIcon[1].style.color = "lightgrey";
+  noIcon[1].style.color = "lightgrey";
+  maybeIcon[1].style.color = "rgb(255, 101, 127)";
+}
+
+//__Disable Styles
+function disableStyle(inputName) {
+  if ((inputName.disabled = true)) {
+    inputName.parentNode.style.backgroundColor = "grey";
+    inputName.parentNode.parentNode.style.backgroundColor = "grey";
+  }
+}
+
+//__Submit and Results Style
 let submitButton = document.getElementById("submit");
 submitButton.addEventListener("click", getResults);
 
@@ -45,16 +150,4 @@ function getResults() {
     resultText.style.color = "red";
     return (resultText.innerHTML = `DON'T get a cat ${catCount}`);
   }
-}
-
-function addCat() {
-  catCount += 1;
-}
-
-function subCat() {
-  catCount -= 1;
-}
-
-function noCat() {
-  catCount -= 0;
 }
