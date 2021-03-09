@@ -163,6 +163,7 @@ function getResults() {
 }
 
 function clearQuiz() {
+  ///LOOP HERE, this all could be hard coded to remove loop
   catCount = 0;
   let arrayTest = [Q1A1, Q2A1, Q3A1, Q1A2, Q2A2, Q3A2, Q1A3, Q2A3, Q3A3];
   for (let i = 0; i < arrayTest.length; i++) {
@@ -170,6 +171,7 @@ function clearQuiz() {
     curItem.disabled = false;
     curItem.checked = false;
     testFun(curItem);
+    resultText.innerHTML = "get results";
   }
 }
 function testFun(arrayItem) {
