@@ -31,6 +31,17 @@ Q2A2.addEventListener("click", selectSecondRow2);
 Q2A3.addEventListener("click", addCat);
 Q2A3.addEventListener("click", selectThirdRow2);
 
+// Question 3
+let Q3A1 = document.getElementById("Q3A1");
+let Q3A2 = document.getElementById("Q3A2");
+let Q3A3 = document.getElementById("Q3A3");
+
+Q3A1.addEventListener("click", subCat);
+Q3A1.addEventListener("click", selectFirstRow3);
+Q3A2.addEventListener("click", maybeCat);
+Q3A2.addEventListener("click", selectSecondRow3);
+Q3A3.addEventListener("click", addCat);
+Q3A3.addEventListener("click", selectThirdRow3);
 //Cat Counter
 function addCat() {
   catCount += 1;
@@ -44,25 +55,7 @@ function maybeCat() {
   catCount -= 0;
 }
 
-// First selection, diable 1 & 3
-
-function selectSecondRow1() {
-  Q1A1.disabled = true;
-  Q1A3.disabled = true;
-  disableStyle(Q1A1);
-  disableStyle(Q1A3);
-  selectedStyle(Q1A2);
-}
-
-function selectSecondRow2() {
-  Q2A1.disabled = true;
-  Q2A3.disabled = true;
-  disableStyle(Q2A1);
-  disableStyle(Q2A3);
-  selectedStyle(Q2A2);
-}
-
-//Second selections, disable 1 & 2
+//First selections, disable 1 & 2
 
 function selectFirstRow1() {
   Q1A2.disabled = true;
@@ -79,7 +72,38 @@ function selectFirstRow2() {
   disableStyle(Q2A3);
   selectedStyle(Q2A1);
 }
+function selectFirstRow3() {
+  Q3A2.disabled = true;
+  Q3A3.disabled = true;
+  disableStyle(Q3A2);
+  disableStyle(Q3A3);
+  selectedStyle(Q3A1);
+}
 
+// Second selection, diable 1 & 3
+
+function selectSecondRow1() {
+  Q1A1.disabled = true;
+  Q1A3.disabled = true;
+  disableStyle(Q1A1);
+  disableStyle(Q1A3);
+  selectedStyle(Q1A2);
+}
+
+function selectSecondRow2() {
+  Q2A1.disabled = true;
+  Q2A3.disabled = true;
+  disableStyle(Q2A1);
+  disableStyle(Q2A3);
+  selectedStyle(Q2A2);
+}
+function selectSecondRow3() {
+  Q3A1.disabled = true;
+  Q3A3.disabled = true;
+  disableStyle(Q3A1);
+  disableStyle(Q3A3);
+  selectedStyle(Q3A2);
+}
 // Third selections, disable 2 & 3
 function selectThirdRow1() {
   Q1A2.disabled = true;
@@ -95,6 +119,13 @@ function selectThirdRow2() {
   disableStyle(Q2A2);
   disableStyle(Q2A1);
   selectedStyle(Q2A3);
+}
+function selectThirdRow3() {
+  Q3A2.disabled = true;
+  Q3A1.disabled = true;
+  disableStyle(Q3A2);
+  disableStyle(Q3A1);
+  selectedStyle(Q3A3);
 }
 
 //Selection Styles
@@ -133,7 +164,7 @@ function getResults() {
 
 function clearQuiz() {
   catCount = 0;
-  let arrayTest = [Q1A1, Q2A1, Q1A2, Q2A2, Q1A3, Q2A3];
+  let arrayTest = [Q1A1, Q2A1, Q3A1, Q1A2, Q2A2, Q3A2, Q1A3, Q2A3, Q3A3];
   for (let i = 0; i < arrayTest.length; i++) {
     let curItem = arrayTest[i];
     curItem.disabled = false;
